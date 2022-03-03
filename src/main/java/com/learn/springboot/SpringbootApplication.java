@@ -11,6 +11,8 @@ import org.springframework.context.ApplicationListener;
 
 @SpringBootApplication
 public class SpringbootApplication {
+	
+	static org.slf4j.Logger logger = LoggerFactory.getLogger(SpringbootApplication.class);
 
 	public static void main(String[] args) {
 		/*
@@ -23,7 +25,7 @@ public class SpringbootApplication {
 //		app.setBanner((Environment environment, Class<?> sourceClass, PrintStream out) ->  out.print("\n\n\t This is my own banner! \n\n".toUpperCase()) );
 //		app.run(args);
 //		
-		org.slf4j.Logger log = LoggerFactory.getLogger(SpringbootApplication.class);
+		
 		
 		new SpringApplicationBuilder(SpringbootApplication.class)
 		.listeners(new ApplicationListener<ApplicationEvent>() {
@@ -31,7 +33,7 @@ public class SpringbootApplication {
 			@Override 
 			public void onApplicationEvent(ApplicationEvent event)
 			{
-				log.info("#### > " + event.getClass().getCanonicalName());
+				logger.info("#### > " + event.getClass().getCanonicalName());
 			}
 		})
 		.bannerMode(Banner.Mode.OFF)

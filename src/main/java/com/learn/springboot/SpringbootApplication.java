@@ -39,7 +39,7 @@ public class SpringbootApplication {
 		.bannerMode(Banner.Mode.OFF)
 //		if we have web related jars on class path and we want to not run the the app as web app then we
 //		can tell spring that don't start the web context
-		.web(WebApplicationType.NONE)
+		//.web(WebApplicationType.NONE)
 		.run(args);
 	}
 
